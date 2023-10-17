@@ -2,7 +2,7 @@ export function PresentationCard() {
   return (
     <div className="RightColumn">
       <img
-        src="./public/PortfolioSVG/CircuitRightPresentation.svg"
+        src="https://i.postimg.cc/nhnJxPdW/Group-7.png"
         className="CircuitPresentation"
         alt=""
       />
@@ -24,7 +24,7 @@ export function PresentationCard() {
           </p>
         </div>
         <img
-          src="./public/cat.gif"
+          src="https://i.postimg.cc/qR6fQVRN/cat.gif"
           className="cat-gif"
           style={{ width: "30%", height: "30%" }}
           alt="cat-gif"
