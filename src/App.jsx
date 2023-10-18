@@ -10,8 +10,9 @@ function App() {
     <main>
       <div className="LeftColumn">
         <img
-          src="https://i.postimg.cc/1RgR72Tc/Left.png"
+          src="https://i.postimg.cc/wBKD3Dmn/Left.png"
           alt="Social Networks"
+          className="Left"
         />
       </div>
       <div className="scroll">
