@@ -15,29 +15,34 @@ main {
   grid-template-rows: 100vh;
   overflow: hidden;
 }
-.LeftColumn {
-  height: 100vh;
-  width: 100%;
-}
-.LeftColumn img {
-  height: 100vh;
-}
 
 /*-----------------------------------------------------*/
 .scroll {
   overflow-y: auto;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  grid-template-rows: 100vh 100vh;
 }
 /*-----------------------------------------------------*/
 .RightColumn {
+  grid-column: 2/3;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.CircuitPresentation {
+.First {
   height: 100vh;
-  width: auto;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Second {
+  height: 100vh;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
 .card-presentation {
   width: 50vw;

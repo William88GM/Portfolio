@@ -1,11 +1,6 @@
 export function PresentationCard() {
   return (
     <div className="RightColumn">
-      <img
-        src="https://i.postimg.cc/nhnJxPdW/Group-7.png"
-        className="CircuitPresentation"
-        alt=""
-      />
       <div className="card-presentation">
         <div>
           <h1>Guillermo Martínez</h1>
@@ -23,6 +18,7 @@ export function PresentationCard() {
             Accusamus, vel ipsa!
           </p>
         </div>
+
         <img
           src="https://i.postimg.cc/qR6fQVRN/cat.gif"
           className="cat-gif"

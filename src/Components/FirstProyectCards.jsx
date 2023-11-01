@@ -1,11 +1,6 @@
 export function FirstProyectCards() {
   return (
     <div className="RightColumn">
-      <img
-        src="https://i.postimg.cc/d395j487/Circuitos.png"
-        className="CircuitPresentation"
-        alt=""
-      />
       <div className="Proyect-cards">
         <img
           src="https://i.postimg.cc/xTtskpfh/Nucleo-Red1.png"

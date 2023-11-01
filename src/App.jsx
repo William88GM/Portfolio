@@ -1,6 +1,6 @@
 import "./App.css";
-import { PresentationCard } from "./Components/PresentationCard";
-import { FirstProyectCards } from "./Components/FirstProyectCards";
+import { LeftColumn } from "./Components/LeftColumn";
+import { RightColumn } from "./Components/RightColumn";
 function App() {
   // const SVGimports = {
   //   Left: "./public/PortfolioSVG/Left.svg",
@@ -8,17 +8,8 @@ function App() {
 
   return (
     <main>
-      <div className="LeftColumn">
-        <img
-          src="https://i.postimg.cc/wBKD3Dmn/Left.png"
-          alt="Social Networks"
-          className="Left"
-        />
-      </div>
-      <div className="scroll">
-        <PresentationCard />
-        <FirstProyectCards />
-      </div>
+      <LeftColumn />
+      <RightColumn />
     </main>
   );
 }
