@@ -1,4 +1,4 @@
-export function FirstProyectCards() {
+export function ProyectCard() {
   return (
     <div className="RightColumn">
       <div className="Proyect-cards">

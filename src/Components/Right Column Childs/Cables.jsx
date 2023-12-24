@@ -1,6 +1,6 @@
-import "../styles/InnerLeftColumn.css";
+import "../../styles/InnerLeftColumn.css";
 
-export function InnerLeftColumn() {
+export function Cables() {
   return (
     <>
       <img
@@ -11,6 +11,11 @@ export function InnerLeftColumn() {
       <img
         src="https://i.postimg.cc/d395j487/Circuitos.png"
         className="Second"
+        alt=""
+      />
+      <img
+        src="https://i.postimg.cc/d395j487/Circuitos.png"
+        className="Third"
         alt=""
       />
     </>

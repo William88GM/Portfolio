@@ -1,13 +1,14 @@
-import { FirstProyectCards } from "./FirstProyectCards";
-import { InnerLeftColumn } from "./InnerLeftColumn";
-import { PresentationCard } from "./PresentationCard";
+import { ProyectCard } from "./Right Column Childs/ProyectCard";
+import { Cables } from "./Right Column Childs/Cables";
+import { PresentationCard } from "./Right Column Childs/PresentationCard";
 
 export function RightColumn() {
   return (
     <div className="scroll">
-      <InnerLeftColumn />
+      <Cables />
       <PresentationCard />
-      <FirstProyectCards />
+      <ProyectCard />
+      <ProyectCard />
     </div>
   );
 }

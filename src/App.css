@@ -21,7 +21,8 @@ main {
   overflow-y: auto;
   display: grid;
   grid-template-columns: 160px 1fr;
-  grid-template-rows: 100vh 100vh;
+  grid-template-rows: 100vh 100vh 100vh;
+  scroll-snap-type: y mandatory;
 }
 /*-----------------------------------------------------*/
 .RightColumn {
@@ -31,6 +32,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: center;
 }
 .First {
   height: 100vh;
