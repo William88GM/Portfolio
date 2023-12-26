@@ -1,6 +1,9 @@
 .LeftColumn {
   height: 100vh;
   width: 100%;
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
 }
 .LeftColumn img {
   height: 100vh;

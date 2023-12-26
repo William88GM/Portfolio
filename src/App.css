@@ -8,146 +8,150 @@
   background-color: rgb(20, 21, 26);
   box-sizing: border-box;
 }
+:root {
+  display: flex;
+  justify-content: center;
+}
 
 main {
+  max-width: 2200px;
+  /* min-width: 1000px; */
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 40% 60%;
   grid-template-rows: 100vh;
   overflow: hidden;
 }
-
+.cat-gif {
+  width: 30%;
+  height: 30%;
+}
 /*-----------------------------------------------------*/
-.scroll {
+.scroll-column {
   overflow-y: auto;
   display: grid;
-  grid-template-columns: 160px 1fr;
+  /* grid-template-columns: 240px 1fr; */
+  grid-template-columns: auto auto;
   grid-template-rows: 100vh 100vh 100vh;
   scroll-snap-type: y mandatory;
+  align-items: center;
+  justify-content: center;
 }
 
-.scroll::-webkit-scrollbar {
+.scroll-column::-webkit-scrollbar {
   width: 10px; /* width of the entire scrollbar */
 }
 
-.scroll::-webkit-scrollbar-track {
+.scroll-column::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0); /* color of the tracking area */
 }
 
-.scroll::-webkit-scrollbar-thumb {
+.scroll-column::-webkit-scrollbar-thumb {
   background-color: rgb(21, 50, 77); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 1px solid rgb(0, 225, 255); /* creates padding around scroll thumb */
 }
 
-/*-----------------------------------------------------*/
-.RightColumn {
-  grid-column: 2/3;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  scroll-snap-align: center;
-}
-.First {
-  height: 100vh;
-  width: 100%;
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.Second {
-  height: 100vh;
-  width: 100%;
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-.card-presentation {
-  width: 50vw;
-  height: 65vh;
-  padding: 40px;
-  margin-right: 5vw;
-  border: 3px solid rgb(58, 216, 255);
-  box-shadow: 0px 0px 10px 0px rgb(58, 216, 255);
-  border-radius: 20px;
-  color: #fff;
+/*--------------MOBILE--------------------*/
 
-  display: flex;
-  align-items: center;
-}
-.card-presentation div {
-  max-height: 100%;
-  overflow-y: auto;
+.main-mobile {
+  display: none;
 }
 
-.card-presentation div::-webkit-scrollbar {
-  width: 6px; /* width of the entire scrollbar */
+@media (width <= 800px) {
+  img {
+    height: 100vh !important;
+    overflow: hidden;
+  }
+  main {
+    display: none;
+  }
+  .main-mobile {
+    display: block;
+  }
+  .mobile-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 100vh 100vh 100vh;
+    overflow-y: auto;
+    justify-items: center;
+    align-items: center;
+    scroll-snap-type: y mandatory;
+  }
+  body {
+    overflow-y: auto;
+  }
+
+  .profile-card {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 100vh;
+    scroll-snap-align: center;
+  }
+  .card-presentation-mobile {
+    /* margin: 10px 0px; */
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 80%;
+    width: 80%;
+    padding: 20px;
+    border: 3px solid rgb(58, 216, 255);
+    box-shadow: 0px 0px 10px 0px rgb(58, 216, 255);
+    border-radius: 20px;
+    color: #fff;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center;
+  }
+
+  .card-presentation-mobile div {
+    max-height: 100%;
+    overflow-y: hidden;
+  }
+
+  .card-presentation-mobile div h1 {
+    font-family: Cascadia-Code;
+    font-weight: 100;
+    font-size: 5vh;
+    margin-bottom: 2%;
+  }
+  .card-presentation-mobile div h3 {
+    font-family: Cascadia-Code;
+    font-weight: 100;
+    font-size: 2.5vh;
+    margin-bottom: 10%;
+  }
+  .card-presentation-mobile div p {
+    font-family: Cascadia-Code;
+    font-weight: 100;
+    text-wrap: balance;
+    font-size: 2.3vh;
+    /* letter-spacing: -0.8px; */
+    max-width: 95%;
+  }
+  .card-presentation-mobile div p:nth-child(3) {
+    margin-bottom: 7%;
+  }
+
+  .Proyect-Vertical-Card-mobile-1 {
+    height: 100vh;
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .div-absolute {
+    scroll-snap-align: center;
+  }
 }
 
-.card-presentation div::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0); /* color of the tracking area */
-}
-
-.card-presentation div::-webkit-scrollbar-thumb {
-  background-color: rgb(21, 50, 77); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 1px solid rgb(0, 225, 255); /* creates padding around scroll thumb */
-}
-
-.card-presentation div h1 {
-  font-family: Cascadia-Code;
-  font-weight: 100;
-  font-size: 5vh;
-  margin-bottom: 2%;
-}
-.card-presentation div h3 {
-  font-family: Cascadia-Code;
-  font-weight: 100;
-  font-size: 2.5vh;
-  margin-bottom: 10%;
-}
-.card-presentation div p {
-  font-family: Cascadia-Code;
-  font-weight: 100;
-  text-wrap: balance;
-  font-size: 2.3vh;
-  /* letter-spacing: -0.8px; */
-  max-width: 95%;
-}
-.card-presentation div p:nth-child(3) {
-  margin-bottom: 7%;
-}
-
-.cat-gif {
-  align-self: flex-end;
-}
-/*-----------------------------------------------------*/
-.Proyect-cards {
-  position: relative;
-  width: 50vw;
-  height: 100vh;
-  margin-right: 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 3px solid #ffffff00;
-
-  gap: 3%;
-}
-.NucleoRed1 {
-  position: absolute;
-  width: 10.5vh;
-  background-color: transparent;
-  left: -40px;
-  top: 21vh;
-}
-.NucleoRed2 {
-  position: absolute;
-  width: 10.5vh;
-  background-color: transparent;
-  left: -40px;
-  bottom: 20vh;
-}
-.Card {
-  height: 45vh;
-  width: fit-content;
+@media (width <= 450px) {
+  .card-presentation-mobile {
+    width: 90%;
+  }
+  .cat-gif {
+    width: 30%;
+    height: 20%;
+  }
 }
